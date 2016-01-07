@@ -38,6 +38,8 @@ while(1)
     }
 
     #(7) prompt for response message, and input response line, sending response lines to clinet, until solitary "."
+    #这部分注释内容为书中原内容，但是运行时发现客户端根本不会等待你输入完返回信息，很快就断开连接，显示失败。
+    #故怀疑是因为HTTP连接或者TCP连接设置的等待时间问题，后面通过预先设置回应报文，就成功进行了交互。
 #    printf("   <<<Type Response Followed by '.'>>>\n");
     
 #    while( $line = <STDIN>)
